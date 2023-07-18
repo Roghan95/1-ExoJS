@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Texte</div>
+    <script>
+        const box = document.querySelector('.box')
+        const style = getComputedStyle(box)
+        console.log(style);
+        document.querySelectorAll('.box').addEventListener('click', function(){
+            alert(
+                style.getPropertyValue("background-color") + "\n" +
+                style.getPropertyValue("color") + "\n" +
+                style.getPropertyValue("width") + "\n" + 
+                style.getPropertyValue("height") + "\n" +
+                style.getPropertyValue("font-family") +
+                style.getPropertyValue("font-size")
+                )
+            })
+
+    </script>
+</body>
+</html>
